@@ -425,53 +425,56 @@ st.markdown("""
         font-weight: 500 !important;
     }
     
-    /* Texte du file uploader */
-    [data-testid="stFileUploader"] label,
-    [data-testid="stFileUploader"] p,
-    [data-testid="stFileUploader"] span,
-    [data-testid="stFileUploader"] small {
-        color: rgba(255, 255, 255, 0.9) !important;
-    }
+    /* ===== FILE UPLOADER - TEXTE VISIBLE EN NOIR ===== */
     
-    /* Section file uploader */
-    [data-testid="stFileUploader"] {
-        color: rgba(255, 255, 255, 0.9) !important;
-    }
-    
-    /* Nom du fichier uploadé - toutes les variantes possibles */
-    [data-testid="stFileUploader"] div,
-    [data-testid="stFileUploader"] button,
-    [data-testid="stFileUploader"] section,
+    /* Zone de drop principale - texte en noir */
     [data-testid="stFileUploadDropzone"] {
-        color: rgba(255, 255, 255, 0.95) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 2px dashed rgba(102, 126, 234, 0.5) !important;
+        border-radius: 16px !important;
     }
     
-    /* Spécifiquement le nom du fichier */
-    [data-testid="stFileUploader"] [data-testid="stMarkdownContainer"],
-    [data-testid="stFileUploader"] > div > div {
-        color: rgba(255, 255, 255, 0.95) !important;
-    }
-    
-    /* Bouton browse files */
-    [data-testid="stFileUploader"] button {
+    /* Texte "Drag and drop file here" - NOIR */
+    [data-testid="stFileUploadDropzone"] span,
+    [data-testid="stFileUploadDropzone"] small,
+    [data-testid="stFileUploadDropzone"] p {
         color: #333 !important;
-        background: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Texte de limite "Limit 200MB per file" - GRIS FONCÉ */
+    [data-testid="stFileUploadDropzone"] small {
+        color: #666 !important;
+    }
+    
+    /* Label du file uploader */
+    [data-testid="stFileUploader"] label {
+        color: rgba(255, 255, 255, 0.95) !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Bouton "Browse files" */
+    [data-testid="stFileUploader"] button {
+        color: white !important;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
         border: none !important;
         font-weight: 600 !important;
+        padding: 0.5rem 1.5rem !important;
+        border-radius: 8px !important;
+        transition: all 0.3s ease !important;
     }
     
-    /* Info text dans file uploader */
-    [data-testid="stFileUploadDropzone"] span,
-    [data-testid="stFileUploadDropzone"] small {
-        color: rgba(255, 255, 255, 0.85) !important;
+    [data-testid="stFileUploader"] button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
     }
     
-    /* RÈGLE UNIVERSELLE - Force TOUS les textes du file uploader en blanc */
-    [data-testid="stFileUploader"] *:not(button) {
+    /* Nom du fichier uploadé - garder en blanc */
+    [data-testid="stFileUploader"] [data-testid="stMarkdownContainer"] {
         color: rgba(255, 255, 255, 0.95) !important;
     }
     
-    /* Container principal du fichier uploadé */
+    /* Container du fichier uploadé */
     [class*="uploadedFile"] {
         color: rgba(255, 255, 255, 0.95) !important;
     }
